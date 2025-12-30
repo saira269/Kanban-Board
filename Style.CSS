@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #df5deb;
+  padding: 20px;
+  transition-duration: 0.5s;
+
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.board {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.column {
+  background: rgb(205, 145, 240);
+  padding: 15px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: #147ee8;
+}
+
+.column h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.task-list {
+  min-height: 200px;
+  padding: 10px;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+}
+
+.task {
+  background: #4facfe;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  cursor: grab;
+  display: flex;
+  justify-content: space-between;
+}
+
+.task button {
+  background: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 0 6px;
+}
+
+button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px;
+  background: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+
+/* Color coding */
+#doing .task { background: #ffa502; }
+#done .task { background: #2ed573; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .board {
+    flex-direction: column;
+    align-items: center;
+  }
+}
